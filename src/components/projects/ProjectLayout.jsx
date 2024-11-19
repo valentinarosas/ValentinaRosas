@@ -18,13 +18,14 @@ const ProjectLayout = ({ name, description, date, image, link }) => {
                 hover:shadow-[0_0_15px_rgba(254,254,91,0.3)] hover:ring-2 hover:ring-accent hover:ring-opacity-50"
     >
       <div className="flex flex-col space-y-4">
-        <div className="relative w-full h-48 rounded-lg overflow-hidden">
+        <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
           <Image
             src={image}
             alt={name}
             fill
-            className="object-cover transform transition-transform duration-500 group-hover:scale-105"
+            className="object-contain transform transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
           />
         </div>
         <div className="flex flex-col space-y-2 relative pt-1">
