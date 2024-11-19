@@ -38,7 +38,7 @@ const WelcomePopup = () => {
           <div className="bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset p-8 rounded-lg text-center w-[90%] max-w-md mx-auto">
             <h2 className="text-2xl font-light mb-4 text-foreground">Welcome To My Portfolio!</h2>
             <p className="text-foreground/90 mb-6">
-              I'm Valentina Rosas, a Venezuelan XR designer based in the USA. Thank you for watching as I bring my concepts to life!
+              I&apos;m Valentina Rosas, a Venezuelan XR designer based in the USA. Thank you for watching as I bring my concepts to life!
             </p>
             <button
               onClick={handleClose}

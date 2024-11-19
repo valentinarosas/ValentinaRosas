@@ -22,7 +22,7 @@ export default function Contact() {
       <article className="relative w-full flex flex-col items-center justify-center py-8 sm:py-0 space-y-8">
         <div className="flex flex-col items-center justify-center space-y-6 w-full sm:w-3/4">
           <h1 className="text-accent font-semibold text-center text-4xl capitalize">
-            Let's Work Together!
+            Let&apos;s Work Together!
           </h1>
         </div>
         <Form />
