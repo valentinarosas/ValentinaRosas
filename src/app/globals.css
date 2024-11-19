@@ -5,10 +5,11 @@
 @layer base {
   :root {
     --background: 27 27 27;
-    --foreground: 225 225 225;
-    --muted: 115 115 115;
-    --accent: 254 254 91;
-    /* hex value of rgb(254,254,91) color is  #FEFE5B  */
+    --foreground: 129 242 200;
+    --muted: 95 199 164;
+    --accent: 64 224 182;
+  }
+  * {
   }
 }
 
@@ -18,7 +19,28 @@
   }
 
   .custom-bg {
-    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+    background-color: rgba(var(--background), 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .bg-firefly-radial {
+    background: radial-gradient(
+      circle,
+      rgba(255, 105, 255, 0.6) 0%,
+      rgba(255, 105, 255, 0) 70%
+    );
+  }
+
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+
+  .animate-spin-slow-reverse {
+    animation: spin 20s linear infinite reverse;
+  }
+
+  .cursor-default {
+    @apply cursor-auto;
   }
 }
 
@@ -28,5 +50,14 @@
   }
   100% {
     transform: translate(100px, 100px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

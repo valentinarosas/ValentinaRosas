@@ -1,11 +1,9 @@
 import {
-  Github,
   Home,
   Linkedin,
   NotebookText,
   Palette,
   Phone,
-  Twitter,
   User,
 } from "lucide-react";
 import Link from "next/link";
@@ -24,12 +22,8 @@ const getIcon = (icon) => {
       return <Palette className="w-full h-auto" strokeWidth={1.5} />;
     case "contact":
       return <Phone className="w-full h-auto" strokeWidth={1.5} />;
-    case "github":
-      return <Github className="w-full h-auto" strokeWidth={1.5} />;
     case "linkedin":
       return <Linkedin className="w-full h-auto" strokeWidth={1.5} />;
-    case "twitter":
-      return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
     case "resume":
       return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
 
@@ -66,15 +60,17 @@ const NavButton = ({
               variants={item}
               href={link}
               target={newTab ? "_blank" : "_self"}
-              className="text-foreground  rounded-full flex items-center justify-center
-        custom-bg
-        "
+              className="text-foreground rounded-full flex items-center justify-center custom-bg transition-all duration-300 border-2 border-transparent hover:border-accent/40 hover:shadow-[0_0_15px_rgba(254,254,91,0.3)]"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
               aria-label={label}
               name={label}
               prefetch={false}
               scroll={false}
             >
-              <span className="relative  w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
+              <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent transition-colors duration-300">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
@@ -91,15 +87,17 @@ const NavButton = ({
               variants={item}
               href={link}
               target={newTab ? "_blank" : "_self"}
-              className="text-foreground  rounded-full flex items-center justify-center
-        custom-bg
-        "
+              className="text-foreground rounded-full flex items-center justify-center custom-bg transition-all duration-300 border-2 border-transparent hover:border-accent/40 hover:shadow-[0_0_15px_rgba(254,254,91,0.3)]"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
               aria-label={label}
               name={label}
               prefetch={false}
               scroll={false}
             >
-              <span className="relative  w-10 h-10  xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent">
+              <span className="relative w-10 h-10 xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent transition-colors duration-300">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
